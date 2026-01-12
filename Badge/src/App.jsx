@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css';
-import Badge from './AddMovie';
+import Badge from './components/AddMovie';
 
 
  
