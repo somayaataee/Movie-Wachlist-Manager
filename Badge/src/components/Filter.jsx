@@ -8,6 +8,6 @@ export default function Filter({filter,setFilter}){
             onClick={()=> setFilter("watched")}>Watched</button>
 
             <button className={filter === "unwatched" ? "Active" : ""}
-             onClick={()=>setFilter("Active")}>Unwatched</button>
+             onClick={()=>setFilter("unwatched")}>Unwatched</button>
         </div>
     );}
