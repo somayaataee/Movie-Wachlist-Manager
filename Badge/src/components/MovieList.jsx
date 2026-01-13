@@ -1,4 +1,4 @@
-export default function ListMovies(){
+export default function MovieList(){
 
     const filteredrMovies = ListMovies.filter((movie)=>{
         if(filter === "All") return true;
@@ -19,10 +19,7 @@ export default function ListMovies(){
                   <button onClick={()=> toggeleMovie(movie.id)}>Toggel</button>
                 </li>
             )}
-        </ul>
-
-        
-        
+        </ul> 
         </>
     )
 }

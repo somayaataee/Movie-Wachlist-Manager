@@ -1,25 +1,25 @@
-export default function Badge({lable,value}){
+import { useState } from "react";
 
-    function handleAddMovie(e){
+export default function AddMovie({onAdd}){
+
+      const [title,setTitle] =useState("");
+      const [genre,setGenre] =useState("Action");
+
+    function handleSubmit(e){
         e.preventDefault();
-
         if(title.trim() === "") return;
 
-        const newMovie={
-            id:Date.now().toString(),
-            title:title,
-            genre:genre,
-            watched:false,
-        };
-        setMovie([...movie ,newMovie])
+        onAdd(title,genre)
         setTitle("");
     }
     return(
         <>
+        <div className="add-movie-form">
         <h2>Add Movie</h2>
 
-        <form onSubmit={handleAddMovie}>
-            <input type="text" placeholder="Enter Movie title.." value={title} onChange={(e)=> setTitle(e.target.value)}/>
+        <form className="form" onSubmit={handleSubmit}>
+            <input type="text" placeholder="Enter Movie title.." value={title}
+             onChange={(e)=> setTitle(e.target.value)}/>
 
             <select value={genre} onChange={(e)=> setGenre(e.target.value)}>
                 <option value="Action">Action</option>
@@ -28,6 +28,7 @@ export default function Badge({lable,value}){
             </select>
             <button type="submit">Add Movie</button>
         </form>
+        </div>
         </>
     )
 }
