@@ -1,23 +1,16 @@
-export default function MovieList(){
+import MovieItem from "./MovieItem";
 
-    const filteredrMovies = ListMovies.filter((movie)=>{
-        if(filter === "All") return true;
-        if(filter === "watched") return movie.watch;
-        if(filter === "unwatched") return !movie.watch
-    })
+export default function MovieList({movies,onToggle,onDelete}){
+    if(movies.length === 0){
+        return <p className="empty">No movies found. Add one!</p>
+    }
+
     return(
         <>
         <h2>Movie List</h2>
-        {filteredrMovies === 0 && (<p>No movies found. add one!</p>)}
-
-        <ul>
-            {filteredrMovies.map((movie)=>
-            <li key={id}><strong>{movie.title}</strong><p>{movie.genre} | {""} {movie.watch ? "watched" 
-                : "unwatched" } </p>
-                
-                  <button onClick={()=> deleteMovie(movie.id)}>Delete</button>
-                  <button onClick={()=> toggeleMovie(movie.id)}>Toggel</button>
-                </li>
+        <ul className="list">
+            {movies.map((movie)=>
+            <MovieItem  key={movie.id} movie={movie} onToggle={onToggle} onDelete={onDelete}></MovieItem>   
             )}
         </ul> 
         </>

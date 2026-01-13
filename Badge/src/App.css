@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+.form input,
+.form select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #125aa0;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.filters .active {
+  background-color: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+/* Movie List */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  margin-top: 5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.badge.watched {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge.unwatched {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Actions */
+.actions button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle {
+  background-color: #e0e0e0;
+}
+
+.delete {
+  background-color: #e53935;
+  color: white;
+}
+
+/* Empty */
+.empty {
+  text-align: center;
+  color: #777;
+}
+
+/* Summary */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}

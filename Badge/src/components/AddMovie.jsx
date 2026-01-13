@@ -26,7 +26,7 @@ export default function AddMovie({onAdd}){
                 <option value="Drama">Drama</option>
                 <option value="Comedy">Comedy</option>
             </select>
-            <button type="submit">Add Movie</button>
+            <button>Add Movie</button>
         </form>
         </div>
         </>
